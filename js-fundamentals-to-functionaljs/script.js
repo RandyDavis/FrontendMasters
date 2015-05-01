@@ -1,9 +1,58 @@
-var box = {};
+var animal = {};
 
-box["material"] = "cardboard";
-box[0] = 'meow';
-box['^&*'] = 'testing 123';
+animal.username = "Chuck";
+animal['tagline'] = "All the Chuck you need!";
 
-for (var key in box) {
+var noises = [];
+animal.noises = noises;
+
+var count = 0;
+for (var key in animal) {
+  console.log(count++);
   console.log(key);
+  if (key == 'username') {
+    console.log('Hi my name is ' + animal[key]);
+  }
+  if (key == 'tagline') {
+    console.log('I like to say ' + animal[key]);
+  }
 }
+
+
+// Instructions for Object Exercise:
+    // Animal User Model
+
+    // This object will be the model of a single animal user. Extra points if you get the pun in the last sentence.
+
+    // Object
+
+    // An object to hold our data model...
+
+    // Create a variable, name it animal, and assign it an object literal.
+    // With Dot Notation…
+
+    // Add a property called username and assign it a value.
+    // Ensure that your username property exists in animal by inspecting it in the console.
+    // With Bracket Notation…
+
+    // Add a property called tagline and give it a value.
+    // Check that your property exists in the animal object by inspecting it in the console.
+    // Create a variable called noises and assign it an empty array []
+    // Add the noises array to your object.
+    // Inspect your handiwork! Your object should look something like this:
+    //   { username: 'DaffyDuck', tagline: 'Yippeee!', noises: [] }
+    // Loops
+
+    // Loop through the properties of your animal object.
+    // Count everytime it loops to keep track of the number of properties on your object.
+    // Write an if/else statement in your loop:
+    // If the key is username, console.log('Hi my name is ' + ___) //fill in with object's username value.
+    // If the key is tagline, console.log('I like to say ' + ___) //fill in with object's tagline value.
+    // What happens if you return 'Hi my name is ' + ___ instead of using console.log() inside the loop?
+    // Review
+
+    // Let's go over some concepts:
+
+    // What are the different ways you can add properties and values to objects?
+    // Which of these methods would you use if you wanted to add a property to an object that had a weird symbol (think '&')?
+    // What about if the property is a variable, how does that change the syntax?
