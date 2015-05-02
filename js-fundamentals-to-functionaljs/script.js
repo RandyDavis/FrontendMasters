@@ -1,16 +1,17 @@
-// ARRAYS - Iteration
+// ARRAYS - Native Properties
+
+//var box = [];
+//
+//box['size'] = true;
+//
+//box['0'] = 'meow';
+//
+//box.length;
 
 var box = [];
 
-box['size'] = 9;
+box['0'];
+box[3] = { 'babyBox': true };
 
-box['0'] = 'meow';
-box.push('Whoohoo!');
-
-for(var k in box) {
-    console.log(box[k]);
-}
-
-for(var i = 0; i < box.length; i++) {
-    console.log(box[i]);
-}
+box['length']; //4
+box.length-1; // 3
