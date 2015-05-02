@@ -1,4 +1,4 @@
-// Functions - Definition
+// Functions - Body/Invocation and call-time
 
 var nameImprover = function (name, adj) {
     return 'Col ' + name + ' Mc' + adj + ' pants';
