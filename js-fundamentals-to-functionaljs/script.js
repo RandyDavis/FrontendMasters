@@ -8,6 +8,8 @@ function nameStaySame(name) {
     return name;
 }
 
+console.log(nameImprover('Randy', 'Sexy'));
+
 $('body').hide();
 
 // The following is just an example of how we would run the forEach() on an array
