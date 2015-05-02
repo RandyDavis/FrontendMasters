@@ -1,12 +1,20 @@
-// Functions - Anatomy of a Function
+// Functions - Definition
 
-var add = function (a, b) {
-    return a + b
+var nameImprover = function (name, adj) {
+    return 'Col ' + name + ' Mc' + adj + ' pants';
 };
 
-add(3, 4, 5)
+function nameStaySame(name) {
+    return name;
+}
 
-console.log(
-    add(3, 4, 5) // 7
-)
+$('body').hide();
+
+// The following is just an example of how we would run the forEach() on an array
+// called myArr that is NOT currently defined
+myArr.forEach(function(val){ console.log(val);});
+
+$('button').on('click', function () {
+    console.log('Don\'t press my buttons!');
+});
 
