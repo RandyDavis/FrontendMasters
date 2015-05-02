@@ -1,13 +1,16 @@
-// ARRAYS - Access and Assignment
+// ARRAYS - Iteration
 
 var box = [];
 
-box[0] = true;
-box[1] = 'meow';
-box.push({ 'hello': 'goodbye' });
+box['size'] = 9;
 
-var i = 0;
+box['0'] = 'meow';
+box.push('Whoohoo!');
 
-box[i];
-box[1];
-box.pop();
+for(var k in box) {
+    console.log(box[k]);
+}
+
+for(var i = 0; i < box.length; i++) {
+    console.log(box[i]);
+}
