@@ -1,23 +1,14 @@
-// Nesting - Nesting Objects
+// Nesting - More Nesting Examples
 
 
 var box = {};
-box.innerBox = {};
+box['innerBox'] = {};
+box['innerBox'].full = true;
 
-box['innerBox']['full'] = true;
+box['innerBox']['height'] = 10;
 
-box.innerBox.babyBox = {};
+// Make the innerBox2 object line work Here
+box.innerBox2 = {};
 
-console.log(box);
+box.innerBox2.full = false;
 
-var myInnerBox = box.innerBox;
-console.log(myInnerBox);  //{full: true}
-
-var bb = box.innerBox.babyBox; // {}
-console.log(bb); // {}
-
-box.innerBox.babyBox.says = "What's Up!?"
-
-console.log(box.innerBox.babyBox.says);  // "What's Up!?"
-
-console.log(bb); // { says: "What's Up!?" }
