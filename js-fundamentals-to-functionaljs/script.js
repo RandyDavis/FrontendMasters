@@ -1,27 +1,15 @@
-// Scope - Local and Global Scope
+// Scope - Parent vs Child Scope
 
-// Anatomy of a function
-var add = function(a, b) {
-  return a + b;
-};
+function blender(fruit) { // parent scope
+  var b = fruit;
+  var y = 'yogurt';
 
-console.log(add(3, 4, 5)); // 7
+  function blendSmoothie() { // child scope
+    alert(b + ' and ' + y + ' makes ' + b + ' swirl');
+    var x = 'asdf';
+  }
+  // console.log(x); // x is not defined error... the child scope can't be reached by the parent scope
+  blendSmoothie();
+}
 
-// Local scope 
-var func = function() {
-  var local = true;
-};
-
-//console.log(local); // undefined
-
-
-// Global scope
-var x = 'global';
- // inside a function
- function encapsulate() {
-  z = "global here, too!"; // leaving "var" off automatically makes variable part of global scope
-
-  window.y = 'also, global!'; // all global variables are attached to the window environment
- }
-
- console.log(x); // 'global'
+blender('blueberry');
