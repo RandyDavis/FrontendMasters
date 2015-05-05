@@ -1,15 +1,24 @@
-// Scope - Parent vs Child Scope
+// Scope - Precedence
 
-function blender(fruit) { // parent scope
-  var b = fruit;
-  var y = 'yogurt';
+var g = "global";
 
-  function blendSmoothie() { // child scope
-    alert(b + ' and ' + y + ' makes ' + b + ' swirl');
-    var x = 'asdf';
-  }
-  // console.log(x); // x is not defined error... the child scope can't be reached by the parent scope
-  blendSmoothie();
+function go() {
+  var l = "local";
+  var g = "in here!";
+  alert(g + " inside go");
 }
 
-blender('blueberry');
+go();
+alert(g + " outside go");
+
+
+// Block Scope
+var inBlock = false;
+
+for(var i = 0; i < 5; i++) {
+  var inBlock = true;
+};
+
+if(inBlock) {
+  console.log('Is there block scope? ' + !inBlock); // Is there block scope? false
+}
