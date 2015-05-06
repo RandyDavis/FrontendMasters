@@ -1,24 +1,9 @@
-// Scope - Precedence
+// Closure - Intro
 
-var g = "global";
-
-function go() {
-  var l = "local";
-  var g = "in here!";
-  alert(g + " inside go");
-}
-
-go();
-alert(g + " outside go");
-
-
-// Block Scope
-var inBlock = false;
-
-for(var i = 0; i < 5; i++) {
-  var inBlock = true;
+var closureAlert = function() {
+  var x = "Help! I'm a variable stuck in a closure!";
+  var alerter = function() {
+    alert(x);
+  };
+  alerter();
 };
-
-if(inBlock) {
-  console.log('Is there block scope? ' + !inBlock); // Is there block scope? false
-}
